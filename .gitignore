@@ -1,3 +1,5 @@
 .idea
 dist
 out
+haskell-test.cabal
+haskell-test.iml
