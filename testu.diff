@@ -1,0 +1,18 @@
+--- catn.hs	2013-03-31 16:23:32.000000000 +0900
++++ Ch2.hs	2013-04-17 22:36:01.000000000 +0900
+@@ -1,12 +1,7 @@
+ main = do cs <- getContents
+-          putStr $ numbering cs
++          print $ countwords cs
+ 
+-numbering :: String -> String
+-numbering cs = unlines $ map format $ zipLineNumber $ lines cs
+-
+-zipLineNumber :: [String] -> [(String, String)]
+-zipLineNumber xs = zip (map show [1..]) xs
+-
+-format (s1, s2) = s1++"  "++s2
++countwords :: String -> Int
++countwords = length . words
+ 
+ 
